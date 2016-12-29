@@ -9,7 +9,7 @@ Below is a simple prairie application,
 app(
   route(
     'get',
-    '^$',
+    '^/$',
     function(req) {
       res <- response()
       
@@ -25,7 +25,7 @@ app(
   # method, path, and handler
   list(
     method = c('get', 'post'),
-    path = '^data$',
+    path = '^/data$',
     handler = function(req) {
       if (method(req) == 'get') {
         as.response(iris) # because who doesn't want iris data?
